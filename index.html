@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diagonal Background</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: url('https://github.com/Tiercen/tokers812.io/blob/main/resources/img/bg_tokers.jpg') center/cover no-repeat;
+      overflow: hidden;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: green; /* Replace with your desired solid color */
+      clip-path: polygon(50% 0%, 100% 0, 100% 100%, 50% 100%);
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay"></div>
+  <!-- Your content goes here -->
+<h1>Tokers of 812</h1>
+</body>
+</html>
