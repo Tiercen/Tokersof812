@@ -1,0 +1,433 @@
+/* SET VARS */
+:root{
+--green: #23ff01ff;
+--pakistan-green: #053b06ff;
+--pale-dogwood: #d5bbb1ff;
+--wenge: #5f5566ff;
+--wenge-2: #604d53ff;
+--maint-txt: 'Dhurjati', sans-serif;
+--alt-txt:'Oxygen', sans-serif;
+--banner-txt: 'Rubik Bubbles';
+--black: rgb(0, 0, 0);
+
+--greenA: hsla(112, 100%, 50%, 0.5);
+--pakistan-greenA: hsla(121, 84%, 13%, 0.5);
+--pale-dogwoodA: hsla(17, 30%, 76%, 0.5);
+--wengeA: hsla(275, 9%, 37%, 0.5);
+--wenge-2A: hsla(341, 11%, 34%, 0.65);
+}
+
+/* Utility Classes */
+.grid-col-span-all{
+    grid-column: span 2;
+}
+
+.flex-col{
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    /* margin: auto; */
+}
+
+.flex-row{
+    display: flex;
+    gap: 1vw;
+}
+
+.section-h1{
+    background-color: var(--pakistan-greenA);
+    border-radius: 20px;
+    padding: 1.5rem;
+}
+
+/* Global */
+iframe{
+    max-height: 45vw;
+    max-width: 45vw;
+}
+
+body{
+    background-color: var(--pale-dogwoodA);
+    font-family: var(--maint-txt);
+    color: var(--pale-dogwood);
+    font-size: 3vw;
+    width: 99%;
+    margin: auto;
+}
+
+h1{
+    font-family: var(--banner-txt);
+    font-size: 6vw;
+    color: var(--green);
+    margin-inline: auto;
+}
+
+h2{
+    font-family: var(--alt-txt);
+    font-size: 3vw;
+    color: var(--pakistan-green);
+    margin-inline: auto;
+}
+
+a{
+    color: var(--pale-dogwood);
+    text-decoration: none;
+}
+
+a:hover{
+    color: var(--green);
+    text-decoration: underline;
+}
+
+.box{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Header */
+
+.header{
+    background-image: url("../img/header1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: 1vw solid var(--wenge-2);
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* grid-template-rows: 1rem 10rem 1rem; */
+    grid-template-areas: 
+        "none none none none none"
+        "nav ... ... ... logo"
+        "banner banner banner ... logo";
+}
+
+.grid-spacer{
+    grid-area: none;
+    min-height: 1.5rem;
+}
+
+.nav{
+    background-color: var(--wenge-2A);
+    grid-area: nav;
+    font-size: 3rem;
+    margin: 0;
+    line-height: 1;
+    align-items: center;
+    justify-content: center;
+    padding: 1vw 4vw;
+    border-top: .1rem solid var(--pale-dogwood);
+    border-bottom: .1rem solid var(--pale-dogwood);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.banner{
+    font-family: var(--banner-txt);
+    grid-area: banner;
+    /* display: none; */
+    margin-inline: auto;
+    padding: 0px 4vw;
+    font-size: 8vw;
+    color: var(--green);
+    /* background-color: var(--pakistan-greenA); */
+}
+
+.logo{
+    height: 15.625rem;
+    width: 16.5625rem;
+    grid-area: logo;
+    padding-right: 1rem;
+}
+
+/* Mission */
+
+.mission{
+    display: grid;
+    gap: 1vw;
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas: 
+        "mission-h1 mission-img"
+        "mission-txt mission-img";
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1.5rem;
+    border-bottom: 1vw solid var(--wenge-2);
+}
+
+.mission-h1{
+    grid-area: mission-h1;
+}
+
+.mission-txt{
+    background-color: var(--wenge);
+    padding: 1.5rem;
+    border-radius: 20px;
+    font-style: italic;
+    grid-area: mission-txt;
+}
+
+.mission-img{
+    grid-area: mission-img;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.mission > img{
+    max-height: 25vw;
+    max-width: 25vw;
+    border-radius: 1.5rem;
+}
+
+/* About */
+
+.about{
+    display: grid;
+    gap: 1vw;
+    background-color: var(--wengeA);
+    padding: 3vw;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: 
+        "about-h1 about-h1 about-h1 about-h1 about-h1"
+        "about-txt about-txt about-txt emp emp"
+        "about-txt about-txt about-txt emp emp"
+        "about-txt about-txt about-txt emp emp";
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1vw solid var(--wenge-2);
+}
+
+.about-h1{
+    grid-area: about-h1;
+    text-align: center;
+    background-color: var(--wenge-2A);
+    border-radius: 20px;
+}
+
+.about-txt{
+    grid-area: about-txt;
+    padding: 3vw;
+    text-align: center;
+    background-color: var(--pakistan-greenA);
+    border-radius: 20px;
+    font-size: 4vw;
+    line-height: 1;
+}
+
+.emp{
+    grid-area: emp;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.emp-card{
+    background-color: var(--wengeA);
+    text-align: center;
+    padding: 2vw;
+    border-radius: 20px;
+    margin: 3vw auto;
+}
+
+.emp-card > img{
+    max-height: 25vw;
+    max-width: 25vw;
+    border-radius: 1.5rem;
+}
+
+/* Products */
+
+.products{
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr;
+    gap: 2vw;
+    padding: 1vw;
+    padding-bottom: 2vw;
+    justify-content: space-evenly;
+    border-bottom: 1vw solid var(--wenge-2)
+}
+
+.products > :last-child{
+    grid-column: span 2;
+}
+
+.product-card{
+    display: grid;
+    flex-wrap: wrap;
+    gap: 1vw;
+    width: 44vw;
+    grid-template-columns: [start-crd start-txt] 2fr [end-txt start-img] auto [ end-card end-img];
+    grid-template-rows: [start-card start-txt start-img] auto [end-card end-txt end-img];
+    /* background-image: linear-gradient(to right, rgba(245, 161, 17, 0.452) , rgba(8, 248, 28, 0.452)); */
+    background-color: var(--pakistan-green);
+    padding: 1.5vw;
+    align-items: center;
+    margin: auto;
+    line-height: .7;
+    border: 2vw solid var(--pakistan-greenA);
+    border-radius: 2.4vw;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 255, 0, 0.2), 0 6px 20px 0 rgba(0, 255, 0, 0.19);
+}
+
+.product-card > img{
+    max-height: 25vw;
+    max-width: 25vw;
+    border-radius: 1.5rem;
+    grid-column: img;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.prod-label{
+    grid-column: start-txt;
+    font-size: 4vw;
+    color: var(--green);
+    padding-bottom: 1.2vw;
+}
+
+.prod-desc{
+    grid-column: start-txt;
+    font-size: 2vw;
+    color: var(--pale-dogwood);
+}
+
+
+/* Locaitons */
+
+.locations{
+    display: grid;
+    flex-wrap: wrap;
+    gap: 1vw;
+    grid-template-columns: 1fr 1fr;
+
+    padding: 4vw;
+    align-items: center;
+    justify-content: center;
+    margin-inline: auto;
+    background-image: url("../img/GreenSmoke_1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-bottom: 1vw solid var(--wenge-2)
+}
+
+.map{
+    margin-inline: auto;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 255, 0, 0.2), 0 6px 20px 0 rgba(0, 255, 0, 0.19);
+}
+
+.locations > div{
+    background-color: var(--pakistan-greenA);
+    line-height: 0.9;
+}
+
+footer{
+    display: grid;
+    gap: 1.5vw;
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    padding: 1.7vw;
+    line-height: .7;
+    font-size: 2vw;
+    background-color: var(--pakistan-greenA);
+}
+
+/* Media Queries */
+@media only screen and (max-width: 510px){
+    /* Global */
+    h2{
+        font-size: 8vw;
+    }
+    
+    .header{
+        background-image: unset;
+        background-color: var(--pakistan-green);
+        
+    }
+
+    .nav{
+        font-size: 1.5rem;
+        
+    }
+
+    .banner{
+        padding-left: 10%;
+    }
+
+    .mission{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "mission-h1"
+        "mission-txt";
+    }
+
+
+    .mission-img{
+        display: none;
+    }
+
+    .about{
+        grid-template-areas: 
+        "about-h1 about-h1 about-h1 about-h1 about-h1"
+        "about-txt about-txt about-txt about-txt about-txt"
+        "emp emp emp emp emp"
+        "emp emp emp emp emp";
+    }
+
+    .about-txt{
+        font-size: 6vw;
+    }
+
+    .emp-card{
+        font-size: 6vw;
+    }
+
+    .emp-card > img{
+        max-height: 45vw;
+        max-width: 45vw;
+    }
+
+    .products{
+        grid-template-columns: 1fr;
+    }
+
+    .grid-col-span-all{
+        grid-column: 1;
+    }
+
+    .products > :last-child{
+        grid-column: 1;
+    }
+
+    .product-card{
+        min-width: 85vw;
+    }
+
+    .product-card > img{
+        max-height: 45vw;
+        max-width: 45vw;
+    }
+
+    .prod-label{
+        font-size: 6vw;
+    }
+    
+    .prod-desc{
+        font-size: 4vw;
+    }
+    
+    .locations{
+        grid-template-columns: 1fr;
+        gap: 3vw;
+    }
+
+    footer{
+        gap: 3vw;
+        grid-template-columns: 1fr;
+        font-size: 4vw;
+    }
+
+}
