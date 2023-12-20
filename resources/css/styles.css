@@ -202,6 +202,8 @@ a:hover{
     text-align: center;
     background-color: var(--wenge-2A);
     border-radius: 20px;
+    padding: 2vw 0px;
+    margin-bottom: 1vw;
 }
 
 .about-txt{
@@ -235,12 +237,15 @@ a:hover{
 }
 
 /* Products */
+
 .products-h1{
     text-align: center;
     background-color: var(--pakistan-greenA);
     border-radius: 20px;
     width: 100%;
+    padding: 2vw 0px;
 }
+
 .products{
     display: grid;
     flex-wrap: wrap;
