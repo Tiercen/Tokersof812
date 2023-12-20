@@ -237,8 +237,9 @@ a:hover{
 /* Products */
 .products-h1{
     text-align: center;
-    background-color: var(--pakistan-green);
+    background-color: var(--pakistan-greenA);
     border-radius: 20px;
+    width: 100%;
 }
 .products{
     display: grid;
