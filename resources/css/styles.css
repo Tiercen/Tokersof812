@@ -235,7 +235,12 @@ a:hover{
 }
 
 /* Products */
-
+.products-h1{
+    grid-area: about-h1;
+    text-align: center;
+    background-color: var(--pakistan-green);
+    border-radius: 20px;
+}
 .products{
     display: grid;
     flex-wrap: wrap;
