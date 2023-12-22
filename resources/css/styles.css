@@ -20,7 +20,7 @@
 /* Animation KeyFrames */
 
 @keyframes fade-in {
-    from {scale: .8; opacity: 0;}
+    /* from {scale: .8; opacity: 0;} */
     to {scale: 1; opacity: 1;}
 }
 
@@ -236,11 +236,11 @@ a:hover{
     padding: 2vw;
     border-radius: 20px;
     margin: 3vw auto;
+    scale: .8; opacity: 0;
 
-    animation: fade-in linear;
+    animation: fade-in linear forwards;
     animation-timeline: view();
-    animation-range-start: contain;
-    animation-range-end: contain;
+    animation-range: entry;
 }
 
 .emp-card > img{
@@ -294,16 +294,16 @@ a:hover{
 }
 
 .product-card > img{
+    scale: .8; opacity: 0;
     max-height: 25vw;
     max-width: 25vw;
     border-radius: 1.5rem;
     grid-column: img;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
-    animation: fade-in linear;
+    animation: fade-in linear forwards;
     animation-timeline: view();
-    animation-range-start: contain;
-    animation-range-end: contain;
+    animation-range: entry;
 }
 
 .prod-label{
