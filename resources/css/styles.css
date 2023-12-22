@@ -17,6 +17,14 @@
 --wenge-2A: hsla(341, 11%, 34%, 0.65);
 }
 
+/* Animation KeyFrames */
+
+@keyframes fade-in {
+    from {scale: .8; opacity: 0;}
+    to {scale: 1; opacity: 1;}
+}
+
+
 /* Utility Classes */
 .grid-col-span-all{
     grid-column: span 2;
@@ -228,6 +236,11 @@ a:hover{
     padding: 2vw;
     border-radius: 20px;
     margin: 3vw auto;
+
+    animation: fade-in linear;
+    animation-timeline: view();
+    animation-range-start: contain;
+    animation-range-end: contain;
 }
 
 .emp-card > img{
@@ -286,6 +299,11 @@ a:hover{
     border-radius: 1.5rem;
     grid-column: img;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    animation: fade-in linear;
+    animation-timeline: view();
+    animation-range-start: contain;
+    animation-range-end: contain;
 }
 
 .prod-label{
